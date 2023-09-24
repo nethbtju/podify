@@ -1,15 +1,20 @@
 import './css/ListItem.css';
+function millisToMinutesAndSeconds(millis) {
+    var minutes = Math.floor(millis / 60000);
+    var seconds = ((millis % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+}
 
-function ListItem() {
+function ListItem(props) {
     return (
-        <div className="ListItem-wrapper">
+        <a href={props.url} className="ListItem-wrapper">
             <span className="albumcover">
-                <img className="albumCoverImg item" alt="album" src="https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png"/>
+                <img className="albumCoverImg item" alt="album" src={props.imgaddress}/>
             </span>
-            <span className="name item">Die For You</span>
-            <span className="artist item">The Weeknd</span>
-            <span className="duration item">3:59</span>
-        </div>
+            <span className="name item">{props.name}</span>
+            <span className="artist item">{props.artist}</span>
+            <span className="duration item">{millisToMinutesAndSeconds(props.duration)}</span>
+        </a>
     );
 }
 

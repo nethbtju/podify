@@ -2,7 +2,7 @@ import './css/Screen.css';
 import battery from './battery.svg';
 import ListItem from "./ListItem";
 
-function Screen() {
+function Screen(props) {
     return (
         <div className="Screen-wrapper">
             <section className="Screen-header">
@@ -14,7 +14,7 @@ function Screen() {
                 <div className="screen-title">Your Top Trending Songs</div>
             </section>
             <section className="api-list">
-                <ListItem/>
+                {props.data}
             </section>
         </div>
     );
