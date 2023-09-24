@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import Control from "./Control";
+import Screen from "./Screen";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="pod-wrapper">
+            <div className="title-wrapper">
+                <header className="title">Podify</header>
+                <span className="subtitle">Get your top artists and tracks anytime</span>
+            </div>
+            <div className="pod">
+                <Screen />
+                <Control />
+            </div>
+        </div>
     </div>
   );
 }

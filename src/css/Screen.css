@@ -1,0 +1,38 @@
+.Screen-wrapper {
+    background-color: white;
+    border-radius: 3px;
+    min-height: 345px;
+    width: 100%;
+    margin-bottom: 20px
+}
+.Screen-header {
+    border-radius: 3px;
+    background: #CFCFCF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.49);
+    padding: 5px 10px;
+}
+.top-shelf {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-shelf-text {
+    justify-content: center;
+    gap: 3px;
+    display: flex;
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.screen-title {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

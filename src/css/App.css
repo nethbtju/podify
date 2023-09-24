@@ -1,0 +1,48 @@
+.App {
+  display: flex;
+  background: #E5E3D8;
+  height: 100vh;
+  justify-content: center;
+}
+
+@media (min-width:801px) {
+  .pod-wrapper {
+    display: flex;
+    margin-block: 40px;
+    gap: 20px;
+  }
+  .title-wrapper {
+    justify-content: center;
+  }
+}
+
+.pod {
+  justify-content: center;
+  padding: 35px;
+  border-radius: 20px;
+  background: #282C34;
+}
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: #00A167;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+  font-family: Roboto, sans-serif !important;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+}
+.subtitle {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  color: #313131;
+  text-align: center;
+  font-family: Roboto, sans-serif !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
