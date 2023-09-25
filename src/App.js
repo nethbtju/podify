@@ -1,6 +1,6 @@
 import './css/App.css';
-import Control from "./Control";
-import Screen from "./Screen";
+import Credentials from "./Credentials";
+import Pod from "./Pod";
 
 function App() {
   return (
@@ -9,11 +9,9 @@ function App() {
             <div className="title-wrapper">
                 <header className="title">Podify</header>
                 <span className="subtitle">Get your top artists and tracks anytime</span>
+                <Credentials />
             </div>
-            <div className="pod">
-                <Screen />
-                <Control />
-            </div>
+            <Pod />
         </div>
     </div>
   );

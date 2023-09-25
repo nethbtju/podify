@@ -1,9 +1,14 @@
 .Screen-wrapper {
     background-color: white;
     border-radius: 3px;
-    min-height: 345px;
+    overflow: hidden;
     width: 100%;
     margin-bottom: 20px
+}
+
+.api-list {
+    height: 290px;
+    overflow: scroll;
 }
 .Screen-header {
     border-radius: 3px;

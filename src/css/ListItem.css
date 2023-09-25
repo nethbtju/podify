@@ -1,5 +1,7 @@
 .ListItem-wrapper {
     display: flex;
+    gap: 10px;
+    width: 250px;
     padding: 10px;
     color: #000;
     font-family: Inter, sans-serif;
@@ -10,13 +12,20 @@
     background: #F1F1F1;
     box-shadow: 0 0.5px 3px 0 rgba(0, 0, 0, 0.25);
 }
+a {
+    text-decoration: none;
+}
+.ListItem-wrapper:hover {
+    background: #bebebe;
+}
+
 .item {
     display: flex;
     align-items: center;
 }
 
 .albumCover {
-    flex: 5%;
+    flex: 10px;
 }
 
 .albumCoverImg {
@@ -24,13 +33,15 @@
 }
 .name {
     margin-left: 5px;
-    flex: 45%;
+    flex: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .artist {
-    flex: 45%;
-}
-
-.duration{
-    flex: 5%;
+    flex: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
