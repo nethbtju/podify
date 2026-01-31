@@ -1,0 +1,105 @@
+:root {
+    --pod-scale: 1;
+}
+
+.App {
+    display: flex;
+    background: #E5E3D8;
+    min-height: 100vh;
+    min-height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@media (min-width:801px) {
+    .pod-wrapper {
+        display: flex;
+        align-items: center;
+        gap: calc(40px * var(--pod-scale));
+    }
+    .title-wrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width:800px) {
+    .pod-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(15px * var(--pod-scale));
+    }
+}
+
+/* Height-based scaling */
+@media (max-height: 700px) {
+    :root { --pod-scale: 0.85; }
+}
+
+@media (max-height: 600px) {
+    :root { --pod-scale: 0.75; }
+}
+
+@media (max-height: 500px) {
+    :root { --pod-scale: 0.65; }
+}
+
+@media (max-height: 450px) {
+    :root { --pod-scale: 0.55; }
+}
+
+.pod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(20px * var(--pod-scale)) calc(20px * var(--pod-scale)) calc(25px * var(--pod-scale)) calc(20px * var(--pod-scale));
+    border-radius: calc(30px * var(--pod-scale));
+    background: linear-gradient(165deg, 
+        #e8e8e8 0%, 
+        #d4d4d4 15%, 
+        #c8c8c8 30%,
+        #bcbcbc 50%,
+        #b0b0b0 70%,
+        #a8a8a8 85%,
+        #9c9c9c 100%);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #888;
+    transform: scale(var(--pod-scale));
+    transform-origin: center center;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.title {
+    color: #00A167;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-size: clamp(32px, 8vw, 56px);
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    padding-block: 8px;
+    color: #313131;
+    text-align: center;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-size: clamp(12px, 3vw, 16px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

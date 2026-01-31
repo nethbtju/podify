@@ -1,0 +1,130 @@
+.now-playing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+    box-sizing: border-box;
+    font-family: 'Chicago', 'Helvetica Neue', Arial, sans-serif;
+    color: #000;
+}
+
+.np-header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 6px 10px;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.np-index {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.np-content {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.np-album-art {
+    flex-shrink: 0;
+    width: 130px;
+    height: 130px;
+}
+
+.np-album-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #999;
+}
+
+.np-track-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    gap: 3px;
+}
+
+.np-title {
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.np-artist {
+    font-size: 11px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.np-album {
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.np-progress-container {
+    padding: 0 10px 10px 10px;
+}
+
+.np-progress-bar {
+    position: relative;
+    height: 12px;
+    background: #d0d0d0;
+    border-radius: 6px;
+    border: 1px solid #888;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.np-progress-stripes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.np-progress-fill {
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        #5b9bd5 0px,
+        #5b9bd5 3px,
+        #3a7ab8 4px,
+        #5b9bd5 5px
+    );
+    border-radius: 5px;
+    transition: width 0.3s linear;
+}
+
+.np-progress-diamond {
+    display: none;
+}
+
+.np-time {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.np-controls {
+    display: none;
+}

@@ -1,0 +1,83 @@
+.ListItem-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 6px 8px;
+    color: #000;
+    font-family: 'Chicago', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    background: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #d0d0d0;
+    transition: all 0.1s ease;
+    box-sizing: border-box;
+}
+
+.ListItem-wrapper:nth-child(odd) {
+    background: #f5f5f5;
+}
+
+.ListItem-wrapper:hover {
+    background: linear-gradient(180deg, #5c9eff 0%, #2968b0 100%);
+    color: #fff;
+}
+
+.ListItem-wrapper:hover .artist,
+.ListItem-wrapper:hover .duration,
+.ListItem-wrapper:hover .name {
+    color: #fff;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.albumcover {
+    flex-shrink: 0;
+}
+
+.albumCoverImg {
+    height: 32px;
+    width: 32px;
+    border-radius: 2px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.name {
+    flex: 1;
+    min-width: 0;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #000;
+}
+
+.artist {
+    flex: 0.7;
+    min-width: 0;
+    font-weight: 400;
+    font-size: 10px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.duration {
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 400;
+    color: #666;
+    font-family: 'Chicago', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Artist circular image */
+.albumCoverImg.rounded {
+    border-radius: 50%;
+}
